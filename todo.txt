@@ -1,0 +1,2 @@
+lazyload
+refetch cuando se inicia sesion luego de cerrar una
