@@ -31,6 +31,7 @@ const Libros = () => {
             </div>
           ) : (
             <button
+              className='openFileUploader'
               onClick={() => {
                 setFormFileUploader(!FormFileUploader)
               }}

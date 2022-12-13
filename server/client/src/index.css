@@ -59,13 +59,18 @@ body {
 }
 
 .Login form button:hover,
-.Register form button:hover {
+.Register form button:hover,
+.FileUploader button:hover,
+.FileUploader form .inputFile:hover,
+.Libros .lista .carta .opcionesDeCarta button:hover {
+  cursor: pointer;
   background-color: #8d4925;
   text-decoration: underline;
 }
 
 .Login form button:disabled,
-.Register form button:disabled {
+.Register form button:disabled,
+.FileUploader button:disabled {
   cursor: default;
   background-color: gray;
   text-decoration: none;
@@ -112,6 +117,10 @@ body {
   margin: 8px;
 }
 
+.Barra button:hover {
+  cursor: pointer;
+}
+
 .Barra .ocultarBarra {
   position: absolute;
   top: -15px;
@@ -123,6 +132,10 @@ body {
   background-color: #a85f3a;
   color: white;
   border-bottom: transparent;
+}
+
+.Barra .ocultarBarra:hover {
+  cursor: pointer;
 }
 
 .Libros {
@@ -148,7 +161,7 @@ body {
   background-color: #f3bf9c;
   margin: 10px;
   text-align: center;
-  border: 1px solid black;
+  border: 0px;
   padding: 5px;
   border-radius: 8px;
   width: 200px;
@@ -171,9 +184,57 @@ body {
   font-size: 20px;
 }
 
-.Libros .lista .cartaDeSubida button {
+.Libros .lista .cartaDeSubida h1 {
+  margin: 0;
+}
+
+.Libros .lista .cartaDeSubida input {
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  margin: 5px;
+}
+.FileUploader form input[type='file'] {
+  display: none;
+}
+
+.FileUploader form .inputFile {
+  display: flex;
+  cursor: pointer;
+  width: 170px;
+  margin: 5px auto;
+  height: 40px;
+  background-color: #5d2417;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.FileUploader button {
+  cursor: pointer;
+  width: 170px;
+  margin: 10px auto;
+  height: 40px;
+  background-color: #5d2417;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.Libros .lista .cartaDeSubida .openFileUploader {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  border: 0;
+  font-size: 40px;
+}
+
+.Libros .lista .cartaDeSubida .openFileUploader:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
 }
 
 .Libros .lista .carta .opcionesDeCarta {
@@ -198,6 +259,8 @@ body {
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid black;
+  background-color: #5d2417;
+  color: white;
 }
 
 .Libros .lista .carta .opcionesDeCarta .closeButton {

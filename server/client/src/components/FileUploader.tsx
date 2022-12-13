@@ -21,7 +21,8 @@ const FileUploader = ({
   setFormFileUploader,
 }: FileUploaderParams) => {
   const [archivo, setArchivo] = useState<File | null | undefined>(null)
-  const [error, setError] = useState<string>('')
+  const [error, setError] = useState<string>('Enviar')
+  const [nombreArchivo, setNombreArchivo] = useState<string | undefined>('')
 
   const userAndToken = useAppSelector((state) => {
     return {
@@ -31,7 +32,7 @@ const FileUploader = ({
   })
 
   const ValidationSchema = Yup.object().shape({
-    title: Yup.string().required('Ingrese un titulo valido'),
+    title: Yup.string().required(),
     thumbnail: Yup.string(),
   })
 
@@ -71,12 +72,9 @@ const FileUploader = ({
             })
         }}
       >
-        {({ isSubmitting, isValid, touched, errors }) => (
+        {({ isSubmitting, isValid }) => (
           <Form>
             <label>Titulo</label>
-            {errors.title && touched.title ? (
-              <p className='error'>{errors.title}</p>
-            ) : null}
             <Field
               name='title'
               placeholder='Introduzca un titulo'
@@ -90,20 +88,25 @@ const FileUploader = ({
             />
 
             <label>Libro</label>
-            <input
-              onChange={(e) => {
-                setError('')
-                if (e.target.files?.item(0)?.size! > 50000000) {
-                  return setError(
-                    'El archivo es demasiado grande (limite maximo de 50mb).'
-                  )
-                }
-                setArchivo(e.target.files?.item(0))
-              }}
-              type='file'
-              accept='application/pdf'
-              required
-            />
+            <label className='inputFile'>
+              {nombreArchivo ? nombreArchivo : 'Seleccione un archivo'}
+
+              <input
+                onChange={(e) => {
+                  setError('')
+                  if (e.target.files?.item(0)?.size! > 50000000) {
+                    return setError(
+                      'El archivo es demasiado grande (limite maximo de 50mb).'
+                    )
+                  }
+                  setArchivo(e.target.files?.item(0))
+                  setNombreArchivo(e.target.files?.item(0)?.name)
+                }}
+                type='file'
+                accept='application/pdf'
+                required
+              />
+            </label>
             <button
               type='submit'
               disabled={
@@ -113,10 +116,8 @@ const FileUploader = ({
                 error.length > 0
               }
             >
-              Enviar
+              {isSubmitting ? 'Subiendo..' : error ? error : 'Enviar'}
             </button>
-            {isSubmitting && <p>Subiendo...</p>}
-            {error && <p>{error}</p>}
           </Form>
         )}
       </Formik>
