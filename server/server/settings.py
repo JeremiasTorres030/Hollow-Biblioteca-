@@ -18,7 +18,7 @@ SECRET_KEY = environ.Env.get_value(env,"SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["lectura-production.up.railway.app"]
 
 
 # Application definition
@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 
 
-CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS = ["lectura-production.up.railway.app"]
 
 
 ROOT_URLCONF = 'server.urls'
