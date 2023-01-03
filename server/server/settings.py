@@ -18,7 +18,7 @@ SECRET_KEY = environ.Env.get_value(env,"SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["lectura-production.up.railway.app"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
