@@ -53,7 +53,8 @@ MIDDLEWARE = [
 
 
 
-CORS_ALLOWED_ORIGINS = ["https://lectura-production.up.railway.app"]
+CORS_ALLOWED_ORIGINS = ["https://lectura-production.up.railway.app",
+"http://localhost:5173"]
 
 
 ROOT_URLCONF = 'server.urls'
