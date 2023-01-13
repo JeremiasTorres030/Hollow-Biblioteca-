@@ -16,7 +16,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = environ.Env.get_value(env,"SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = ["https://lectura-production.up.railway.app",
-"http://0.0.0.0:4000","http://127.0.0.1:8000"]
+"http://0.0.0.0:4000"]
 
 
 ROOT_URLCONF = 'server.urls'
