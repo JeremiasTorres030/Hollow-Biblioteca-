@@ -86,6 +86,7 @@ body {
   height: 100%;
   position: relative;
   overflow-x: hidden;
+  background-color: #e4dcd7;
 }
 
 .Barra {
@@ -144,7 +145,6 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #e4dcd7;
 }
 .Libros h1 {
   margin: 0 auto 30px auto;

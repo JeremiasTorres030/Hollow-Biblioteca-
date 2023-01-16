@@ -12,8 +12,8 @@ interface Values {
 }
 
 const validationSchema = Yup.object().shape({
-  username: Yup.string().required('Ingrese un nombre de usuario valido'),
-  password: Yup.string().required('Ingrese una contraseña valida'),
+  username: Yup.string().required('Ingrese un nombre de usuario válido'),
+  password: Yup.string().required('Ingrese una contraseña válida'),
 })
 
 const Login = () => {
@@ -76,7 +76,7 @@ const Login = () => {
             </Form>
           )}
         </Formik>
-        <Link to={'/register'}>Registrarse</Link>
+        <Link to={'/register'}>Crear cuenta</Link>
       </div>
     </div>
   )

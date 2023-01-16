@@ -11,9 +11,9 @@ interface Values {
 }
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string().required('Ingrese un correo electronico valido'),
-  username: Yup.string().required('Ingrese un nombre de usuario valido'),
-  password: Yup.string().required('Ingrese una contraseña valida'),
+  email: Yup.string().required('Ingrese un correo electrónico válido'),
+  username: Yup.string().required('Ingrese un nombre de usuario válido'),
+  password: Yup.string().required('Ingrese una contraseña válida'),
 })
 
 const Register = () => {
@@ -24,7 +24,7 @@ const Register = () => {
   return (
     <div className='Register'>
       <div className='registerCard'>
-        <h1>Register</h1>
+        <h1>Crear cuenta</h1>
         {error && <p className='error'>{error}</p>}
         <Formik
           initialValues={{
@@ -55,16 +55,16 @@ const Register = () => {
               ) : null}
               <Field
                 name='username'
-                placeholder='Ingrese nombre de usuario'
+                placeholder='Ingrese un nombre de usuario'
                 type='text'
               />
-              <label>Correo electronico</label>
+              <label>Correo electrónico</label>
               {errors.email && touched.email ? (
                 <p className='error'>{errors.email}</p>
               ) : null}
               <Field
                 name='email'
-                placeholder='Ingrese un correo electronico'
+                placeholder='Ingrese un correo electrónico'
                 type='email'
               />
               <label>Contraseña</label>

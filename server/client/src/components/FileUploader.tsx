@@ -74,10 +74,10 @@ const FileUploader = ({
       >
         {({ isSubmitting, isValid }) => (
           <Form>
-            <label>Titulo</label>
+            <label>Título</label>
             <Field
               name='title'
-              placeholder='Introduzca un titulo'
+              placeholder='Introduzca un título'
               type='text'
             />
             <label>Imagen de portada</label>
@@ -96,7 +96,7 @@ const FileUploader = ({
                   setError('')
                   if (e.target.files?.item(0)?.size! > 50000000) {
                     return setError(
-                      'El archivo es demasiado grande (limite maximo de 50mb).'
+                      'El archivo es demasiado grande (límite máximo de 50mb).'
                     )
                   }
                   setArchivo(e.target.files?.item(0))

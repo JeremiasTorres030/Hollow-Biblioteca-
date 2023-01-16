@@ -21,7 +21,7 @@ const BookCardEdit = ({
 }: BookCardParams) => {
   const [editBookAction] = useEditBookMutation()
   const validationSchema = Yup.object().shape({
-    title: Yup.string().required('Ingrese un nuevo titulo'),
+    title: Yup.string().required('Ingrese un nuevo título'),
     thumbnail: Yup.string().required('Ingrese una nueva portada'),
   })
 
@@ -56,12 +56,12 @@ const BookCardEdit = ({
       >
         {({ isSubmitting, isValid, touched, errors }) => (
           <Form>
-            <label>Titulo nuevo</label>
+            <label>Título nuevo</label>
             {errors.title && touched.title ? <p>{errors.title}</p> : null}
             <Field
               type='text'
               name='title'
-              placeholder='Ingrese el nuevo titulo'
+              placeholder='Ingrese el nuevo título'
             />
             <label>Nueva portada</label>
             {errors.thumbnail && touched.thumbnail ? (
