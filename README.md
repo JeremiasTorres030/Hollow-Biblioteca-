@@ -16,7 +16,7 @@ Para inicializar el proyecto se necesita un archivo .env en el directorio "/" co
 
 Y otro en el directorio "/client" con los siguientes valores.
 
-VITE_API_URL Url del servidor
+`VITE_API_URL` Url del servidor
 
 
 ## Instalacion e inicio para desarrollo
