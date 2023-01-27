@@ -17,10 +17,7 @@ from .models import Libro
 from .serializers import LibroSerializer
 from .serializers import UserLibroSerializer
 
-
-
-dbx = dropbox.Dropbox(environ.Env.get_value(env,"ACCESS_TOKEN_DROPBOX"))
-
+dbx = dropbox.Dropbox(app_key = environ.Env.get_value(env,"APP_KEY"),app_secret = environ.Env.get_value(env,"APP_SECRET"),oauth2_refresh_token = environ.Env.get_value(env,"ACCESS_TOKEN_DROPBOX"))
 
 class PdfView(APIView):
     def get(self,request,libro_id,format = None):
