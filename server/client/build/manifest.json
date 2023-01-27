@@ -1,10 +1,14 @@
 {
+  "src/assets/favicon.ico": {
+    "file": "static/favicon.076640ae.ico",
+    "src": "src/assets/favicon.ico"
+  },
   "src/assets/images/photo-1521587760476-6c12a4b040da.jpg": {
     "file": "static/photo-1521587760476-6c12a4b040da.e7d3d9eb.jpg",
     "src": "src/assets/images/photo-1521587760476-6c12a4b040da.jpg"
   },
   "index.html": {
-    "file": "static/index.bff1c9b9.js",
+    "file": "static/index.da1f8050.js",
     "src": "index.html",
     "isEntry": true,
     "css": [
