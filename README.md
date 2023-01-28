@@ -12,7 +12,9 @@ Para inicializar el proyecto se necesita un archivo .env en el directorio "/" co
 
 `ACCESS_TOKEN_DROPBOX` Dropbox Api
 
-`PORT` 
+`APP_KEY` Dropbox Api
+
+`APP_SECRET` Dropbox Api
 
 Y otro en el directorio "/client" con los siguientes valores.
 
