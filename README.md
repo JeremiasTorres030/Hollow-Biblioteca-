@@ -1,7 +1,7 @@
 
-# Lectura
+# Hollow 
 
-Lectura es un proyecto propio de gestion de archivos pdfs.
+Hollow es un proyecto propio de gestion de archivos pdfs.
 
 
 ## Variables de entorno
