@@ -3,6 +3,18 @@
 
 Hollow es un proyecto propio de gestion de archivos pdfs.
 
+[**Demo**](https://lectura-production.up.railway.app/)
+
+## Imagenes
+
+- Inicio
+
+
+![Pagina de inicio](https://res.cloudinary.com/drifqbdtu/image/upload/w_690/v1678399654/Readme/Biblioteca/inicio_ws2yiw.png)
+- Subir archivo
+
+
+![Subir archivo](https://res.cloudinary.com/drifqbdtu/image/upload/v1678399655/Readme/Biblioteca/subirLibro_zkazom.gif)
 
 ## Variables de entorno
 
@@ -25,7 +37,7 @@ Y otro en el directorio "/client" con los siguientes valores.
 
 Instalación e inicio para desarrollo.
 
-Servidor.
+- Servidor.
 
 ```bash
   cd server
@@ -35,7 +47,7 @@ Servidor.
   py manage.py migrate  
   py manage.py runserver
 ```
-Cliente.
+- Cliente.
 
 ```bash
   cd server
