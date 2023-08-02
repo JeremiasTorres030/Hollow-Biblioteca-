@@ -53,8 +53,8 @@ MIDDLEWARE = [
 
 
 
-CORS_ALLOWED_ORIGINS = ["https://lectura-production.up.railway.app",
-"http://0.0.0.0:4000"]
+CORS_ALLOWED_ORIGINS = ["https://hollow-cvcm.onrender.com",
+"http://0.0.0.0:10000"]
 
 
 ROOT_URLCONF = 'server.urls'
